@@ -128,7 +128,7 @@ The styles and scripts elements only works in the component, so you can style ht
 The listeners will allow you to add interactivity to the elements
 
 To add a listener to an element add the attribute 'listener' and the first argument is the event
-like load, click, submit, input, mousenter, mouseleave, focus, blur, etc... and the second argument the function name, note that when you create a function it is stored in window, and what the element does to access the function is to use window[<function name>] (event)
+like load, click, submit, input, mousenter, mouseleave, focus, blur, etc... and the second argument the function name, note that when you create a function it is stored in window, and what the element does to access the function is to use window[function name] (event)
 
 ```html
 <script>
