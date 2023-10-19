@@ -36,6 +36,7 @@ You can create Components with Shadow DOM, only add attribute 'shadow-dom' to th
 <html-c shadow-dom src='./components/header.html'></html-c>
 ```
 
+The styles and scripts elements only works in the component, so you can style html tags without a class
 ```html
 <!-- components -> header.html -->
 <style>
