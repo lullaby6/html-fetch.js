@@ -8,7 +8,7 @@
 
 ## Getting Started
 
-#### Using basic component
+Using basic component
 ```html
 <html-c src='./components/header.html'></html-c>
 ```
