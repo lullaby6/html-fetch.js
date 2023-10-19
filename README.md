@@ -48,6 +48,8 @@ header.html file:
 
 ### Children
 
+You can make layouts components using the children prop
+
 ```html
 <!-- index.html -->
 <html-c src="./components/layouts/HeaderLayout.html">
@@ -59,6 +61,8 @@ header.html file:
     </ul>
 </html-c>
 ```
+
+{children} will be replaced by the content of the html-c tag
 
 ```html
 <!-- components -> layouts -> HeaderLayout.html -->
