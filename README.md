@@ -128,22 +128,22 @@ The styles and scripts elements only works in the component, so you can style ht
 The listeners will allow you to add interactivity to the elements
 
 To add a listener to an element add the attribute 'listener' and the first argument is the event
-like load, click, submit, input, mousenter, mouseleave, focus, blur, etc... and the second argument the function name, to make a function you need add to add a value to window.HTMLComponentProps
+like load, click, submit, input, mousenter, mouseleave, focus, blur, etc... and the second argument the function name, note that when you create a function it is stored in window, and what the element does to access the function is to use window[<function name>] (event)
 
 ```html
 <script>
-    window.HTMLComponentProps['redirect'] = event => {
-        window.location.href = 'index.html'
+    async function login(event){
+        event.preventDefault();
+
+        //login logic
     }
 </script>
-<header>
-    <img listener="click-redirect" src="logo.png">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</header>
+
+<form listener="submit-login">
+    <input type="email" name="email" id="">
+    <input type="password" name="password" id="">
+    <input type="submit" value="Login">
+</form>
 ```
 
-the listener can have multiple listeners like "click-redirect load-set_image"
+the listener can have multiple listeners like "submit-login click-say_hi"

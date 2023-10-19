@@ -48,13 +48,12 @@ window.HTMLComponentRender = container => {
     container.querySelectorAll('[listener]').forEach(async listenerElement =>
         listenerElement.getAttribute('listener').split(' ').forEach(listener => {
             const [eventName, methodName] = listener.split('-')
-			listenerElement.addEventListener(eventName, event => HTMLComponentProps[methodName](event))
-            if(eventName == 'load') HTMLComponentProps[methodName](listenerElement.dispatchEvent(new Event('load')))
+			listenerElement.addEventListener(eventName, event => window[methodName](event))
+            if(eventName == 'load') window[methodName](listenerElement.dispatchEvent(new Event('load')))
         })
     )
 }
 
-window.HTMLComponentProps = {}
 window.HTMLComponentRender(document)
 window.HTMLComponentInsert = (container, html, direction = 'beforeend') => {
     container.insertAdjacentHTML(direction, html);
