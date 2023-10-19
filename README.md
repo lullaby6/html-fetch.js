@@ -27,7 +27,8 @@ header.html file:
 </header>
 ```
 
-#### Shadow DOM
+
+### Shadow DOM
 
 You can create Components with Shadow DOM, only add attribute 'shadow-dom' to the html-c tag
 
