@@ -48,6 +48,7 @@ header.html file:
 
 ### Children
 
+```html
 <!-- index.html -->
 <html-c src="./components/layouts/HeaderLayout.html">
     <img src="logo.png">
