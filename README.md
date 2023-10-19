@@ -155,6 +155,5 @@ the listener can have multiple listeners like "submit-login click-say_hi"
 You can reference html files without .html extension
 
 ```html
-<!-- index.html -->
 <html-c src="./components/header"></html-c>
 ```
