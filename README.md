@@ -27,7 +27,7 @@ header.html file:
 </header>
 ```
 
-### Component Props
+### Props
 
 ```html
 <!-- index.html -->
@@ -43,6 +43,36 @@ header.html file:
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
+</header>
+```
+
+### Children
+
+<!-- index.html -->
+<html-c src="./components/layouts/HeaderLayout.html">
+    <img src="logo.png">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</html-c>
+```
+
+```html
+<!-- components -> layouts -> HeaderLayout.html -->
+<style>
+    #my-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 25px;
+    }
+</style>
+
+<header id="my-header">
+    {children}
 </header>
 ```
 
@@ -75,7 +105,7 @@ The styles and scripts elements only works in the component, so you can style ht
     a {
         text-decoration: none;
     }
-</style>
+</>
 
 <header>
     <img src="logo.png">
