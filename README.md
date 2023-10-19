@@ -109,3 +109,5 @@ like load, click, submit, input, mousenter, mouseleave, focus, blur, etc... and 
     </ul>
 </header>
 ```
+
+the listener can have multiple listeners like "click-redirect load-set_image"
