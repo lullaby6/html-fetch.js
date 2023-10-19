@@ -31,7 +31,7 @@ header.html file:
 
 ```html
 <!-- index.html -->
-<html-c logo="logo.npng" src="./components/header.html"></html-c>
+<html-c logo="logo.png" src="./components/header.html"></html-c>
 ```
 
 ```html
