@@ -76,8 +76,32 @@ The styles and scripts elements only works in the component, so you can style ht
         text-decoration: none;
     }
 </style>
+
 <header>
     <img src="logo.png">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</header>
+```
+
+### Listeners
+
+The listeners will allow you to add interactivity to the elements
+
+To add a listener to an element add the attribute 'listener' and the first argument is the event
+like load, click, submit, input, mousenter, mouseleave, focus, blur, etc... and the second argument the function name, to make a function you need add to add a value to window.HTMLComponentProps
+
+```html
+<script>
+    window.HTMLComponentProps['redirect'] = event => {
+        window.location.href = 'index.html'
+    }
+</script>
+<header>
+    <img listener="click-redirect" src="logo.png">
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
