@@ -111,6 +111,7 @@ The styles and scripts elements only works in the component, so you can style ht
         text-decoration: none;
     }
 </>
+</style>
 
 <header>
     <img src="logo.png">
