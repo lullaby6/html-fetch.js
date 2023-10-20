@@ -1,22 +1,30 @@
-# html-component
+# HTML-Component Library
+
+## Overview
+
+The HTML-Component library is a lightweight JavaScript library designed to simplify the creation and management of HTML components for web applications. This library allows you to define reusable components, pass data to them, and even encapsulate styles and behavior within a component's Shadow DOM.
 
 ## Installation
+
+To get started with the HTML-Component library, include the following script in your HTML file:
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/lullaby6/html-component/html-component.min.js" defer></script>
 ```
 
-## Usage
+## Basic Usage
 
-### Getting Started
+### Creating a Basic Component
 
-Using basic component
+To create a basic component, use the `<html-c>` tag and specify the source (HTML file) of your component. For example:
+
 ```html
 <!-- index.html -->
 <html-c src="./components/header.html"></html-c>
 ```
 
-header.html file:
+Your `header.html` file might look like this:
+
 ```html
 <!-- components -> header.html -->
 <header>
@@ -29,12 +37,16 @@ header.html file:
 </header>
 ```
 
-### Props
+### Using Props
+
+You can pass data to your components using props. Simply add the desired props to the `<html-c>` tag, and use curly braces `{}` in the component file to insert the prop values. For example:
 
 ```html
 <!-- index.html -->
 <html-c logo="logo.png" src="./components/header.html"></html-c>
 ```
+
+In your `header.html` file, you can use the `logo` prop as follows:
 
 ```html
 <!-- components -> header.html -->
@@ -48,9 +60,9 @@ header.html file:
 </header>
 ```
 
-### Children
+### Creating Layout Components with Children
 
-You can make layouts components using the children prop
+You can design layout components by using the `children` prop. This allows you to embed content within your component. For example:
 
 ```html
 <!-- index.html -->
@@ -64,7 +76,7 @@ You can make layouts components using the children prop
 </html-c>
 ```
 
-{children} will be replaced by the content of the html-c tag
+In your `HeaderLayout.html` file, use `{children}` to specify where the embedded content should appear:
 
 ```html
 <!-- components -> layouts -> HeaderLayout.html -->
@@ -73,7 +85,6 @@ You can make layouts components using the children prop
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         padding: 25px;
     }
 </style>
@@ -85,14 +96,15 @@ You can make layouts components using the children prop
 
 ### Shadow DOM
 
-You can create Components with Shadow DOM, only add attribute "shadow-dom" to the html-c tag
+To encapsulate styles and scripts within a component, add the `shadow-dom` attribute to the `<html-c>` tag. This allows you to create components with a scoped Shadow DOM. Styles and scripts defined within the component will only affect that component. For example:
 
 ```html
 <!-- index.html -->
 <html-c shadow-dom src="./components/header.html"></html-c>
 ```
 
-The styles and scripts elements only works in the component, so you can style html tags without a class
+In your `header.html` file, you can define styles that apply only to the component:
+
 ```html
 <!-- components -> header.html -->
 <style>
@@ -100,7 +112,6 @@ The styles and scripts elements only works in the component, so you can style ht
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         padding: 25px;
     }
 
@@ -112,7 +123,6 @@ The styles and scripts elements only works in the component, so you can style ht
     a {
         text-decoration: none;
     }
-</>
 </style>
 
 <header>
@@ -125,19 +135,16 @@ The styles and scripts elements only works in the component, so you can style ht
 </header>
 ```
 
-### Listeners
+### Event Listeners
 
-The listeners will allow you to add interactivity to the elements
-
-To add a listener to an element add the attribute 'listener' and the first argument is the event
-like load, click, submit, input, mousenter, mouseleave, focus, blur, etc... and the second argument the function name, note that when you create a function it is stored in window, and what the element does to access the function is to use window[function name] (event)
+To add interactivity to your components, you can attach event listeners using the `listener` attribute. Specify the event (e.g., `click`, `submit`) and the function name. Make sure the function is globally accessible, as it is stored in the `window` object for access. For example:
 
 ```html
 <script>
     async function login(event){
         event.preventDefault();
 
-        //login logic
+        // Login logic
     }
 </script>
 
@@ -148,12 +155,14 @@ like load, click, submit, input, mousenter, mouseleave, focus, blur, etc... and 
 </form>
 ```
 
-the listener can have multiple listeners like "submit-login click-say_hi"
+You can define multiple listeners by separating them with spaces, like "submit-login click-say_hi."
 
 ### Tips
 
-You can reference html files without .html extension
+You can reference HTML files without the `.html` extension, making your code more concise:
 
 ```html
 <html-c src="./components/header"></html-c>
 ```
+
+This concise syntax simplifies component references within your project.
