@@ -1,5 +1,16 @@
 # HTML-Component Library
 
+## Table of Contents
+- [Overview](#overview)
+- [Installation](#installation)
+- [Basic Usage](#basic-usage)
+  - [Creating a Basic Component](#creating-a-basic-component)
+  - [Using Props](#using-props)
+  - [Creating Layout Components with Children](#creating-layout-components-with-children)
+  - [Shadow DOM](#shadow-dom)
+  - [Event Listeners](#event-listeners)
+  - [Tips](#tips)
+
 ## Overview
 
 The HTML-Component library is a lightweight JavaScript library designed to simplify the creation and management of HTML components for web applications. This library allows you to define reusable components, pass data to them, and even encapsulate styles and behavior within a component's Shadow DOM.
