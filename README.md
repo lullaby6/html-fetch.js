@@ -1,6 +1,6 @@
 # HTML-Component Library
 
-## Table of Contents
+<!-- ## Table of Contents
 - [Overview](#overview)
 - [Installation](#installation)
 - [Basic Usage](#basic-usage)
@@ -9,7 +9,7 @@
   - [Creating Layout Components with Children](#creating-layout-components-with-children)
   - [Shadow DOM](#shadow-dom)
   - [Event Listeners](#event-listeners)
-  - [Tips](#tips)
+  - [Tips](#tips) -->
 
 ## Overview
 
