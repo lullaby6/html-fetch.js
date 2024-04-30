@@ -35,7 +35,7 @@ and in our html we would use the `ly-component` element and we would indicate th
 
 ## Props
 
-To set the properties of the components, do it through the attributes and you can get the property/attribute through `{<attribute name>}`
+To set the properties of the components, do it through the attributes and you can get the property/attribute using `{<attribute name>}` in your component
 
 For example:
 
