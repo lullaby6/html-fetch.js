@@ -14,5 +14,5 @@
 ## Installation
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/lullaby6/ly-component/ly-component.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/lullaby6/ly-component/cdn.js" defer></script>
 ```
