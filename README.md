@@ -7,6 +7,7 @@
 - [Layouts](#layouts)
 - [Shadow DOM](#shadow-dom)
 - [Events](#events)
+- [Methods](#methods)
 - [Tips](#tips)
 
 ## Installation
