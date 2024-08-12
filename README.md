@@ -1,4 +1,4 @@
-# HTML Fetch
+# html-fetch.js
 
 ## Table of Contents
 - [Installation](#installation)
@@ -13,12 +13,12 @@
 ## Installation
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/lullaby6/html-fetch/html-fetch.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/lullaby6/html-fetch.js/html-fetch.js"></script>
 ```
 
 ## Basic Usage
 
-The components are basically html files that you can call from the `html-fetch` element with the `src` attribute.
+The components are basically html files that you can call from the `html-fetch` custom element with the `src` attribute.
 
 for example we have this file in the path `/components/MyComponent.html`:
 
