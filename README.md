@@ -90,7 +90,20 @@ Add event listeners to elements within components:
 
 ### Attributes
 
+| Key | Description |
+|-----------------|----------------------------------------------------------------------------|
+| src | Path to the HTML file to be loaded (required) |
+| shadow-dom | Enable Shadow DOM for the component |
+| children | Content to be inserted into the component (automatically set) |
+| on | Space-separated list of event-handler pairs |
+
 ### Methods
+
+| Method | Description |
+|-----------------|----------------------------------------------------------------------------|
+| HTMLFetchConfig.render(component) | Manually render a component |
+| HTMLFetchConfig.renderContainer(container) | Render all components within a container |
+| HTMLFetchConfig.loadScripts(component) | Load and execute scripts within a component |
 
 ## Events
 
