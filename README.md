@@ -1,4 +1,4 @@
-# Ly Component
+# HTML Fetch
 
 ## Table of Contents
 - [Installation](#installation)
@@ -12,12 +12,12 @@
 ## Installation
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/lullaby6/ly-component/cdn.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/lullaby6/html-fetch/html-fetch.js"></script>
 ```
 
 ## Basic Usage
 
-The components are basically html files that you can call from the `ly-component` element with the `src` attribute.
+The components are basically html files that you can call from the `html-fetch` element with the `src` attribute.
 
 for example we have this file in the path `/components/MyComponent.html`:
 
@@ -27,10 +27,10 @@ for example we have this file in the path `/components/MyComponent.html`:
 </div>
 ```
 
-and in our html we would use the `ly-component` element and we would indicate the path through the `src` attribute:
+and in our html we would use the `html-fetch` element and we would indicate the path through the `src` attribute:
 
 ```html
-<ly-component src="/components/MyComponent.html"/>
+<html-fetch src="/components/MyComponent.html"/>
 ```
 
 ## Props
@@ -40,7 +40,7 @@ To set the properties of the components, do it through the attributes and you ca
 For example:
 
 ```html
-<ly-component src="/components/Title.html" title="Game of Thrones"/>
+<html-fetch src="/components/Title.html" title="Game of Thrones"/>
 ```
 
 `Title` component:

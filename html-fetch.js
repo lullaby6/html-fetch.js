@@ -1,5 +1,5 @@
-if (!window.lyComponentConfig) window.lyComponentConfig = {
-    renderComponent: async component => {
+if (!window.HTMLFetchConfig) window.HTMLFetchConfig = {
+    render: async component => {
         if (!component.hasAttribute('src')) return
         if (component.componentRendered) return
         component.componentRendered = true
@@ -32,9 +32,9 @@ if (!window.lyComponentConfig) window.lyComponentConfig = {
 
         root.innerHTML = text.replace(regex, (match, att) => component.getAttribute(att) || '')
 
-        window.lyComponentConfig.loadScripts(root)
+        window.HTMLFetchConfig.loadScripts(root)
 
-        window.lyComponentConfig.renderContainer(component)
+        window.HTMLFetchConfig.renderContainer(component)
     },
 
     loadScripts: component => {
@@ -57,9 +57,9 @@ if (!window.lyComponentConfig) window.lyComponentConfig = {
     },
 
     renderContainer: container => {
-        const components = container.querySelectorAll('ly-component')
+        const components = container.querySelectorAll('html-fetch')
 
-        components.forEach(window.lyComponentConfig.renderComponent)
+        components.forEach(window.HTMLFetchConfig.render)
 
         const elements = container.querySelectorAll('[on]')
 
@@ -75,20 +75,20 @@ if (!window.lyComponentConfig) window.lyComponentConfig = {
     },
 
     load: () => {
-        window.lyComponentConfig.renderContainer(document.body)
+        window.HTMLFetchConfig.renderContainer(document.body)
 
-        window.lyComponentConfig.observer = new MutationObserver(changes => {
-            window.lyComponentConfig.renderContainer(document.body)
+        window.HTMLFetchConfig.observer = new MutationObserver(changes => {
+            window.HTMLFetchConfig.renderContainer(document.body)
 
             changes.forEach(change => {
-                if (change.type == 'attributes' && change.target.tagName.toLowerCase() == 'ly-component') {
+                if (change.type == 'attributes' && change.target.tagName.toLowerCase() == 'html-fetch') {
                     change.target.componentRendered = false
-                    window.lyComponentConfig.renderComponent(change.target)
+                    window.HTMLFetchConfig.render(change.target)
                 }
             })
         })
 
-        window.lyComponentConfig.observer.observe(document.body, {
+        window.HTMLFetchConfig.observer.observe(document.body, {
             attributes: true,
             characterData: true,
             childList: true,
@@ -99,4 +99,4 @@ if (!window.lyComponentConfig) window.lyComponentConfig = {
     }
 }
 
-document.addEventListener('DOMContentLoaded', window.lyComponentConfig.load)
+document.addEventListener('DOMContentLoaded', window.HTMLFetchConfig.load)
